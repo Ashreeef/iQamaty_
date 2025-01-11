@@ -1,0 +1,208 @@
+.prayer-times-form {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.prayer-times-form h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+  text-align: center;
+}
+
+.prayer-times-form table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.prayer-times-form thead {
+  background-color: #f9fafc;
+}
+
+.prayer-times-form thead td {
+  font-weight: 700;
+  text-align: left;
+  padding: 12px;
+  color: #34495e;
+  border-bottom: 2px solid #e5e9f0;
+}
+
+.prayer-times-form tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.prayer-times-form tbody tr:hover {
+  background-color: #f2f8fc;
+}
+
+.prayer-times-form tbody td {
+  padding: 12px;
+  font-size: 15px;
+  color: #4b4b4b;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.prayer-times-form input[type="time"] {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prayer-times-form input[type="time"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.prayer-times-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prayer-times-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.prayer-times-form button:active {
+  transform: translateY(1px);
+}
+
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.toast-notification {
+  background-color: #17a2b8;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  animation: slideIn 0.3s ease, fadeOut 3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 1024px) {
+  .prayer-times-form table {
+    font-size: 14px;
+  }
+
+  .prayer-times-form input[type="time"] {
+    width: 100%;
+  }
+
+  .prayer-times-form button {
+    font-size: 14px;
+  }
+
+  #notification-container {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prayer-times-form table {
+    display: block;
+  }
+
+  .prayer-times-form thead {
+    display: none;
+  }
+
+  .prayer-times-form tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e9f0;
+  }
+
+  .prayer-times-form tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .prayer-times-form tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 10px;
+    color: #34495e;
+    flex: 1;
+  }
+
+  .prayer-times-form input[type="time"] {
+    flex: 2;
+  }
+
+  .prayer-times-form button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  #notification-container {
+    width: 90%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .content {
+    padding-top: 70px; 
+  }
+}
+
+@media (min-width: 1201px) {
+  .content {
+    padding-top: 50px;
+  }
+
+  .prayer-times-form table {
+    gap: 0.5rem; 
+  }
+}

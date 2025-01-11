@@ -1,0 +1,224 @@
+.about-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--tertiary-color), var(--secondary-color));
+  color: var(--white);
+  height: 400px;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-button {
+  background-color: var(--white);
+  color: var(--secondary-color);
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--tertiary-color);
+  color: var(--white);
+}
+
+/* Highlight Section */
+.highlight-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.highlight-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.highlight-card:hover i {
+  color: var(--tertiary-color);
+}
+
+.highlight-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.highlight-card p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6rem;
+}
+
+/* Team Section */
+.team-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card-image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .social-links {
+  opacity: 1;
+}
+
+.social-links a {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--tertiary-color);
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.6rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  nav {
+    position: fixed !important; 
+    top: 0 !important;
+  }
+
+  .about-section {
+    margin-top: 10rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "your-vendor/your-project-name",
+    "description": "A brief description of your project",
+    "version": "1.0.0",
+    "require": {
+      "php": ">=7.3.0",
+      "vlucas/valitron": "^1.4",
+      "ext-pdo": "*",
+      "phpmailer/phpmailer": "^6.9"
+    }
+  }

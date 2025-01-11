@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f2fcfc;
+  color: #2d4f7c;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 50px; /* Default padding for PCs */
+  margin-top: -43px;
+}
+
+.prayer-times {
+  text-align: center;
+}
+
+.mosque-title {
+  font-size: 2rem;
+  color: #074eb2;
+  margin-bottom: 1.5rem;
+}
+
+.clock h1 {
+  font-size: 4rem;
+  color: #333;
+}
+
+.clock h1 span {
+  font-size: 2rem;
+  color: #666;
+}
+
+.date-info {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.date-info h3 {
+  margin: 0.5rem 0;
+  color: #074eb2;
+}
+
+.prayer-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.prayer-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 140px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.prayer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-box h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #074eb2;
+}
+
+.prayer-box span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.icon-box {
+  font-size: 2rem;
+  color: #074eb2;
+  margin-bottom: 0.5rem;
+}
+
+/* Highlight for the nextmost prayer */
+.next-prayer {
+  background-color: #f0f9ff; 
+  border: 1px solid #a8d8f0; 
+  box-shadow: 0 0 10px 2px rgba(168, 216, 240, 0.5);
+  transform: scale(1.03); 
+  animation: gentlePulse 2.5s infinite ease-in-out; 
+}
+
+@keyframes gentlePulse {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(168, 216, 240, 0.5);
+    transform: scale(1.03);
+  }
+  50% {
+    box-shadow: 0 0 15px 4px rgba(168, 216, 240, 0.7);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(168, 216, 240, 0.5);
+    transform: scale(1.03);
+  }
+}
+
+.next-prayer h3 {
+  color: #065a82; 
+  font-weight: bold;
+}
+
+.next-prayer span {
+  color: #444; 
+  font-weight: 500; 
+}
+
+/* for phones */
+@media (max-width: 768px) {
+  .prayer-boxes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav__header{
+    margin-top: 2.73rem;
+  }
+
+  .clock h1 {
+    font-size: 3rem;
+  }
+
+  .mosque-title {
+    font-size: 1.5rem;
+    margin-top: 5.5rem;
+  }
+
+  .prayer-box {
+    width: 100%;
+  }
+
+  .content {
+    padding-top: 100px; 
+  }
+}
+
+/* for PCs */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .content {
+    padding-top: 70px; 
+  }
+}
+
+/* for desktops */
+@media (min-width: 1201px) {
+  .content {
+    padding-top: 50px;
+  }
+
+  .prayer-boxes {
+    gap: 0.5rem; 
+  }
+}

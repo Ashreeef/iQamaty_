@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    background-color: #f2fcfc;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+
+header {
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+h1 {
+    color: #0245A3;
+    margin: 0;
+}
+
+.join-book {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: -20px;
+}
+
+.join-book ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.join-book li {
+    font-size: x-large;
+    display: inline-block;
+    margin: 0 50px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #0245A3; 
+    background-color: transparent; 
+}
+
+.join-book li:hover:not(.active) {
+    color: #0245A3; 
+    background-color: #e6f0ff; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.join-book li.active {
+    background-color: #0245A3; 
+    color: #ffffff !important; 
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #0245A3;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    position: relative;
+    background-color: #fff;
+    margin: 30px auto;
+    width: 500px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 25px;
+    list-style: none;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content p {
+    padding: 15px;
+}
+
+.tab-content ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.tab-content li {
+    list-style: none;
+    padding: 10px;
+}
+
+/* Booking Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Shadow effect */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 95%;
+    height: auto;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.modal2 h2{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal2 label{
+    font-size: 16px;
+    display: block;
+    margin: 15px 0 5px;
+}
+
+.modal2 select,
+.modal2 input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.modal2 .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.modal2 .buttons button {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0245A3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal2 .buttons button:hover {
+    background-color: #003a82;
+}
+
+.modal2 .buttons button:nth-child(2) {
+    background-color: #ccc;
+    color: #333;
+}
+
+.modal2 .buttons button:nth-child(2):hover {
+    background-color: #aaa;
+}
+
+.modal2 .error-message {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tab-content{
+        width: 95%;
+    }
+
+    .join-book li {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+        font-size: large;
+    }
+
+    header h1 {
+        margin-top: 100px;
+    }
+
+    .modal2 {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .modal2 h2 {
+        font-size: 18px;
+    }
+
+    .modal2 label {
+        font-size: 14px;
+    }
+
+    .modal2 select,
+    .modal2 input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .modal2 .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal2 .buttons button {
+        font-size: 16px;
+    }
+}

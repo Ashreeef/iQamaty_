@@ -1,0 +1,295 @@
+.hidden {
+    display: none;
+}
+.d-flex.align-center.gap-15 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#search-bar {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 280px;
+    height: 42px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+    margin-right: 20px;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+.filters .form-select {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8fff8;
+    max-width: 180px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.filters .form-select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Table Styling */
+.responsive-table {
+    overflow-x: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead td {
+    background: #f3f3f3;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+}
+
+table tbody td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+td[data-status="occupied"] {
+    color: green;
+    font-weight: bold;
+}
+
+td[data-status="unoccupied"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* Displayed Rooms Count */
+.room-count {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+}
+
+/* Button Styling */
+.manageRoomsbtn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+.manageRoomsbtn:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Redesigned Modern Form */
+.modern-form-container {
+    background: linear-gradient(135deg, #f3fff3, #e8ffe8);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    max-width: 750px;
+    position: relative;
+    border: 1px solid #e0ffe0;
+}
+
+/* Title Styling */
+.form-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2e7d32; /* Dark green for contrast */
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+.form-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #4caf50;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #b9ddb9;
+    border-radius: 12px;
+    background: #f5fff5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+    background-color: #ffffff;
+}
+.input-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Floating Effect */
+.input-group input:not(:placeholder-shown) + label,
+.input-group select:focus + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: bold;
+    color: #4caf50;
+    background-color: #f5fff5;
+    padding: 0 5px;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+}
+
+/* Buttons */
+.submit-btn {
+    background: linear-gradient(135deg, #4caf50, #388e3c);
+    color: white;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.2); 
+    width: 100%;
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32);
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+.submit-btn:disabled {
+    background: #b9ddb9;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Suggestions */
+#student-search {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #b9ddb9;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: #f5fff5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#student-search:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+.suggestions {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #ffffff;
+}
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    color: #2e7d32;
+}
+.suggestions div:hover {
+    background-color: #f3fff3;
+}
+
+/* Footer */
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #search-bar {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .manageRoomsbtn {
+        width: 100%;
+    }
+    .modern-form-container {
+        padding: 30px;
+    }
+    .form-title {
+        font-size: 24px;
+    }
+    .input-group input,
+    .input-group select {
+        padding: 12px;
+        font-size: 14px;
+    }
+    .submit-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

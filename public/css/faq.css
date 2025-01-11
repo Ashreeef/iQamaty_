@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2fcfc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.section__container {
+    max-width: 800px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.header__content {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+header .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #074eb2;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+header .title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #4a90e2; 
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+header .description {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    padding-top: 0.5rem;
+    font-weight: 400; 
+}
+
+.faq-section {
+    padding: 4em 2em;
+}
+
+.faq {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -2rem;
+}
+
+.faq li {
+    background: #ffffff;
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 1em;
+    position: relative;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.faq li:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #f5faff;
+}
+
+/* FAQ Question */
+.q {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #074eb2;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.q:hover {
+    color: #052c75;
+}
+
+.q .arrow {
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: 0.3s;
+    color: #074eb2;
+}
+
+/* FAQ Answer */
+.a {
+    overflow: hidden;
+    height: 0;
+    padding: 0 1em;
+    transition: height 0.4s ease, padding 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+a:hover{
+    color: #052c75;
+    border-bottom: 1px solid #052c75;
+}
+
+.a p {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.a-opened {
+    height: auto;
+    padding-top: 0.5em;
+}
+
+
+@media (max-width: 768px) {
+    header .title {
+        font-size: 2.2rem;
+        margin-top: 4.5rem;
+    }
+
+    header .description {
+        font-size: 1.1rem;
+    }
+
+    .faq-section {
+        padding: 2em 1em;
+    }
+
+    .faq li {
+        padding: 1.2rem;
+    }
+
+    .q {
+        font-size: 1.1rem;
+    }
+
+    .q .arrow {
+        font-size: 1rem;
+    }
+}

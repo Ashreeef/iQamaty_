@@ -1,0 +1,252 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2fcfc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header .title {
+    font-size: 2.5rem;
+    color: #074eb2;
+    margin-bottom: 1rem;
+}
+
+header .description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: auto;
+}
+
+.report__form__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.report__form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap */
+    width: 100%;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #074eb2;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.form-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-color: #074eb2;
+    border-radius: 50%;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.input-wrapper input,
+.input-wrapper select,
+.input-wrapper textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid rgba(105, 105, 105, 0.3);
+    border-radius: 8px;
+    outline: none;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px; /* i switched from 1rem to 16px to prevent phone zooming effect */
+}
+
+.input-wrapper textarea {
+    padding: 20px 16px 16px; /* Adjusted top padding for description */
+    resize: none; /* Prevent resizing */
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus,
+.input-wrapper textarea:focus {
+    border-color: #074eb2;
+    box-shadow: 0 0 8px rgba(7, 78, 178, 0.2);
+}
+
+.input-wrapper span {
+    position: absolute;
+    top: 20px; /* Default position for placeholder */
+    left: 16px;
+    font-size: 1rem;
+    color: grey;
+    transition: 0.3s ease;
+    pointer-events: none; /* Prevent interaction */
+}
+
+.input-wrapper input:focus + span,
+.input-wrapper input:not(:placeholder-shown) + span,
+.input-wrapper select:focus + span,
+.input-wrapper textarea:focus + span,
+.input-wrapper textarea:not(:placeholder-shown) + span {
+    top: -10px; /* Float above the field */
+    font-size: 0.85rem; /* Smaller placeholder font */
+    font-weight: 600;
+    color: #074eb2; /* Highlight color for floating placeholder */
+}
+
+.input-wrapper select:valid + span {
+    top: -12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #074eb2;
+}
+
+.flex {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .report__form {
+        padding: 2rem;
+    }
+
+    .flex {
+        flex-direction: column; /* Stack inputs vertically */
+    }
+
+    .header__content {
+        margin-top: 5rem;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .input-wrapper input,
+    .input-wrapper select,
+    .input-wrapper textarea {
+        padding: 14px; /* Slightly reduced padding for smaller screens */
+        font-size: 0.95rem; /* Adjust font size */
+    }
+
+    header .title {
+        font-size: 2rem;
+    }
+
+    header .description {
+        font-size: 1rem;
+    }
+}
+
+.submit {
+    border: none;
+    background-color: #074eb2;
+    padding: 14px; /* Increased padding */
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem; /* Increased font size */
+    transition: 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .submit {
+        width: auto;
+    }
+}
+
+.submit:hover {
+    background-color: #052c75;
+}
+
+/* Custom File Upload Styling */
+.input-wrapper input[type="file"] {
+    display: none;
+}
+
+.input-wrapper label[for="file-upload"] {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 12px;
+    border: 1px solid rgba(105, 105, 105, 0.3);
+    border-radius: 8px;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper label[for="file-upload"]:hover {
+    border-color: #074eb2;
+    box-shadow: 0 0 8px rgba(7, 78, 178, 0.2);
+}
+
+.input-wrapper .file-name {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 480px) {
+    .report__form {
+        padding: 1.5rem;
+    }
+
+    .form-title {
+        font-size: 1.8rem;
+    }
+
+    .input-wrapper span {
+        font-size: 0.8rem;
+    }
+
+    .input-wrapper input,
+    .input-wrapper select,
+    .input-wrapper textarea {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    .submit {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}

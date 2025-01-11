@@ -1,0 +1,233 @@
+.hidden {
+    display: none;
+}
+
+.addStudentbtn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s;
+}
+
+.addStudentbtn:hover {
+    background: linear-gradient(135deg, #45a049, #3e8e41);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.d-flex.align-center.gap-15 {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#search-bar {
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 280px;
+    height: 42px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+/* Hide the trash icon initially; only show it on hover */
+.delete-student-icon {
+    margin-left: 8px;
+    color: #e74c3c;         
+    cursor: pointer;
+    opacity: 0;           
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Show icon when row is hovered */
+.student-row:hover .delete-student-icon {
+    opacity: 1;
+}
+
+.delete-student-icon:hover {
+    transform: scale(1.2);
+}
+
+.student-row:hover {
+    background-color: #f9f9f9; 
+}
+
+
+/* Form container */
+.modern-form-container {
+    background: linear-gradient(135deg, #f7f7f7, #f3f3f3);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.modern-form-container::before,
+.modern-form-container::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: rgba(76, 175, 80, 0.08);
+    border-radius: 50%;
+}
+
+.modern-form-container::before {
+    top: -30px;
+    left: -30px;
+}
+
+.modern-form-container::after {
+    bottom: -30px;
+    right: -30px;
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Floating label styling */
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+    background-color: #fff;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Floating label behavior */
+.input-group span {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    font-size: 16px;
+    color: #aaa;
+    transition: 0.3s ease;
+    pointer-events: none;
+    background-color: #f9f9f9;
+    padding: 0 5px;
+}
+
+.input-group input:focus + span,
+.input-group input:not(:placeholder-shown) + span,
+.input-group select:focus + span,
+.input-group textarea:focus + span,
+.input-group textarea:not(:placeholder-shown) + span {
+    top: -10px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #45a049, #3e8e41);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .d-flex.align-center.gap-15 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    #search-bar,
+    .addStudentbtn {
+        width: 100%;
+    }
+
+    .modern-form-container {
+        padding: 30px;
+    }
+
+    .form-title {
+        font-size: 20px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

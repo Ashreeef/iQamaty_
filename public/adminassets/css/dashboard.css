@@ -1,0 +1,184 @@
+body {
+    background-color: #f5f7fa;
+}
+
+.container {
+    padding: 20px;
+}
+
+.page-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.row-grid {
+    display: grid;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+.bg-light {
+    background-color: #eee;
+}
+.shadow-sm {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.rad-10 {
+    border-radius: 10px;
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+.c-grey {
+    color: #555;
+}
+.fs-14 {
+    font-size: 14px;
+}
+.fs-15 {
+    font-size: 15px;
+}
+.fs-30 {
+    font-size: 30px;
+}
+.txt-c-mobile {
+    text-align: center;
+}
+
+.info-box {
+    margin: 0 20px;
+    text-align: center;
+}
+.info-box span {
+    display: block;
+}
+
+/* Feeds */
+.feeds-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.feeds-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+.feeds-list li:last-child {
+    border-bottom: none;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+.menu-list li:last-child {
+    border-bottom: none;
+}
+
+/* Tasks */
+.task-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 420px;
+    border-radius:6px;
+    border: 1px solid #ddd;
+}
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.delete {
+    cursor: pointer;
+    color: red;
+    font-size: 1.2rem;
+}
+
+/* Stats */
+.stats-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.stat-box h3 {
+    font-size: 1.1rem;
+    color: #333;
+}
+.stat-box p {
+    margin: 0;
+}
+
+/* Charts */
+.charts-section .bg-white {
+    text-align: center;
+}
+
+/* Projects table */
+.responsive-table table thead td {
+    font-weight: 600;
+    color: #333;
+}
+.responsive-table table tbody tr td {
+    padding: 10px 0;
+}
+.bg-green {
+    background-color: #10b981;
+}
+.bg-orange {
+    background-color: #f59e0b;
+}
+.bg-blue {
+    background-color: #3b82f6;
+}
+
+/* Color classes */
+.c-blue {
+    color: #3b82f6;
+}
+.c-green {
+    color: #10b981;
+}
+.c-red {
+    color: #ef4444;
+}
+.c-orange {
+    color: #f59e0b;
+}

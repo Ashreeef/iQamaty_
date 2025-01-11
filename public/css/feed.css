@@ -1,0 +1,305 @@
+.feed-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.user-info-banner {
+    background-color: #074eb2;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 1.4rem; 
+}
+
+.user-info-banner .welcome-message {
+    font-weight: 500;
+}
+
+.user-info-banner .user-details {
+    font-size: 1.2rem; 
+    background-color: #fff;
+    color: #074eb2;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.user-info-banner .user-details p {
+    margin: 0.2rem 0;
+}
+
+.feed-section {
+    flex: 2;
+    width: 100%;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-title {
+    font-size: 1.6rem;
+    color: var(--tertiary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.feed-section .section-title {
+    font-size: 2.5rem;
+    color: var(--tertiary-color);
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feed-section .section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.feed-section .section-title i {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.post {
+    background-color: #fff;
+    padding: 1.8rem; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.8rem; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem; 
+}
+
+.post-header .admin-name {
+    font-weight: bold;
+    color: var(--tertiary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem; 
+    font-size: 1.2rem; 
+}
+
+.post-header .admin-name i {
+    font-size: 1.4rem; 
+    color: var(--secondary-color);
+}
+
+.post-header .post-date {
+    font-size: 1rem; 
+    color: #666;
+}
+
+.post-content h3 {
+    font-size: 1.8rem; 
+    margin-bottom: 0.8rem; 
+    color: var(--tertiary-color);
+}
+
+.post-content p {
+    font-size: 1.1rem; 
+    color: #333;
+    line-height: 1.6; 
+}
+
+.post-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.post-content img:hover {
+    transform: scale(1.05);
+}
+
+.additional-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    padding: 1.5rem; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem; 
+}
+
+.section-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.section-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+}
+
+.section-box img:hover {
+    transform: scale(1.05);
+}
+
+.section-box h3 {
+    font-size: 1.4rem; 
+    color: var(--tertiary-color);
+    margin-bottom: 0.7rem; 
+}
+
+.section-box p {
+    font-size: 1.1rem; 
+    color: #333;
+    line-height: 1.6;
+}
+
+.section-box button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.section-box button:hover {
+    background-color: #0056b3;
+}
+
+.sidebar .section-box + .section-box {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .feed-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        max-width: none;
+        width: 100%;
+    }
+
+    .feed-section {
+        width: 100%;
+    }
+
+    .user-info-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .user-info-banner .user-details {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .feed-section .section-title {
+        font-size: 2rem;
+    }
+
+    .section-box {
+        width: 95%;
+    }
+
+    .user-info-banner {
+        font-size: 1.2rem; 
+        margin-top: 50px;
+    }
+
+    .user-info-banner .user-details {
+        font-size: 1rem; 
+    }
+
+    .user-info-banner .user-details p {
+        margin: 0.1rem 0;
+    }
+
+    .post {
+        padding: 1.6rem; 
+        margin-bottom: 1.6rem;
+    }
+
+    .post-header .admin-name {
+        font-size: 1rem; 
+    }
+
+    .post-header .post-date {
+        font-size: 0.9rem; 
+    }
+
+    .post-content h3 {
+        font-size: 1.6rem; 
+    }
+
+    .post-content p {
+        font-size: 1rem; 
+    }
+
+    .section-box h3 {
+        font-size: 1.3rem; 
+    }
+
+    .section-box p {
+        font-size: 1rem; 
+    }
+
+    .section-box img {
+        height: 180px; 
+    }
+
+    .section-box button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
